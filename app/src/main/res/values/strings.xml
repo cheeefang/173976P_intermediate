@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Week5Submission</string>
+    <string name="moviename">Name</string>
+    <string name="moviedesc">Description</string>
+    <string name="movielang">Language</string>
+    <string name="englang">English</string>
+    <string name="chilang">Chinese</string>
+    <string name="malaylang">Malay</string>
+    <string name="tamillang">Tamil</string>
+    <string name="releasedate">Release Date</string>
+    <string name="notsuitable">Not Suitable for all audience</string>
+    <string name="violence">Violence</string>
+    <string name="langused">Language Used</string>
+    <string name="addmoviebtn">ADD MOVIE</string>
+    <string name="movieName">Enter the title of movie</string>
+    <string name="movieDesc">Enter a short description of the movie</string>
+    <string name="movieRelease">Enter release date</string>
+    <string name="addText">ADD</string>
+    <string name="clearText">Clear Entries</string>
+</resources>
