@@ -18,27 +18,28 @@ class movie_rater : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie_rater)
-        val movie_title=intent.getStringExtra("TitleReview")
-        val movie_overview=intent.getStringExtra("DescReview")
-        val movie_releasedate=intent.getStringExtra("DateReview")
-        val movie_lang=intent.getStringExtra("LangReview")
-        val movie_recommend=intent.getStringExtra("RecommendornotReview")
-        showTitle.setText("Enter Your review for the movie:"+movie_title)
-        showOverview.setText("Movie Description:"+movie_overview+"\n")
-        showreleasedate.setText("Movie Release Date:"+movie_releasedate)
-        showLanguage.setText("Movie Language"+movie_lang)
-        showSuitableorNot.setText("Suitable for Children below 13:"+movie_recommend)
+        val bundle:Bundle?=intent.extras
+        val movie_title=bundle!!.getString("TitleReview")
+        val movie_overview=bundle!!.getString("DescReview")
+        val movie_releasedate=bundle!!.getString("DateReview")
+        val movie_lang=bundle!!.getString("LangReview")
+        val movie_recommend=bundle!!.getString("RecommendornotReview")
+        showTitle.text="Enter Your review for the movie:"+movie_title
+        showOverview.text="Movie Description:"+movie_overview+"\n"
+        showreleasedate.text="Movie Release Date:"+movie_releasedate
+        showLanguage.text="Movie Language"+movie_lang
+        showSuitableorNot.text="Suitable for Children below 13:"+movie_recommend
 
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         if(item?.itemId==R.id.submitButton){
             val bundle:Bundle?=intent.extras
-            val movie_title=intent.getStringExtra("TitleReview")
-            val movie_overview=intent.getStringExtra("DescReview")
-            val movie_releasedate=intent.getStringExtra("DateReview")
-            val movie_lang=intent.getStringExtra("LangReview")
-            val movie_recommend=intent.getStringExtra("RecommendornotReiew")
+            val movie_title=bundle!!.getString("TitleReview")
+            val movie_overview=bundle!!.getString("DescReview")
+            val movie_releasedate=bundle!!.getString("DateReview")
+            val movie_lang=bundle!!.getString("LangReview")
+            val movie_recommend=bundle!!.getString("RecommendornotReiew")
             val userrating=starrating.rating.toFloat()
             val userreview=editreview.text.toString()
             val somethingIntent= Intent(applicationContext,movie_details::class.java)

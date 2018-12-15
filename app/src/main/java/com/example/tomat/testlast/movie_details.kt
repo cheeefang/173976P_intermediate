@@ -16,6 +16,7 @@ class movie_details : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie_details)
+        registerForContextMenu(showReview)
         val bundle: Bundle?=intent.extras
         val movie_title= bundle!!.getString("title");
         val movie_overview=bundle!!.getString("overview");
