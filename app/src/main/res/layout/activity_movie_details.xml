@@ -39,6 +39,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="No Reviews yet.\n Long press here to add \n"/>
+    <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            android:visibility="gone"/>
     <TextView
             android:id="@+id/showLanguagelabel"
             android:layout_width="wrap_content"
