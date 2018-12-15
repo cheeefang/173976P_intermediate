@@ -13,11 +13,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
     }
 
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        if (item?.itemId == R.id.add) {
+        if (item?.itemId == R.id.addButton) {
             val checkmoviename = editmoviename.text
             val checkmoviedesc = editmoviedesc.text
             val checkdate = editreleasedate.text
@@ -34,7 +35,7 @@ class MainActivity : AppCompatActivity() {
                 showMovie()
             }
 
-        } else if (item?.itemId == R.id.clear) {
+        } else if (item?.itemId == R.id.clearButton) {
             editmoviename.text.clear()
             editmoviedesc.text.clear()
             editreleasedate.text.clear()
@@ -132,9 +133,9 @@ class MainActivity : AppCompatActivity() {
         val desc = editmoviedesc.text.toString()
         val releasedate = editreleasedate.text.toString()
 
-        val movieInt = Intent(applicationContext, showMovie()::class.java)
+        val movieInt = Intent(applicationContext, movie_details::class.java)
         movieInt.putExtra("title", title)
-        movieInt.putExtra("desc", desc)
+        movieInt.putExtra("overview", desc)
         movieInt.putExtra("releasedate", releasedate)
         movieInt.putExtra("lang", lang)
         movieInt.putExtra("recommend", recommend)
