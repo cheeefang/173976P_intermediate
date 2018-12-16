@@ -49,10 +49,7 @@ class movie_details : AppCompatActivity() {
 
         }
     }
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.movie_details,menu)
-        return super.onCreateOptionsMenu(menu)
-    }
+
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         if (item?.itemId==R.id.cancelButton){
