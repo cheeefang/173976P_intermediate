@@ -47,18 +47,20 @@ class movie_details : AppCompatActivity() {
         super.onResume()
         val bundle:Bundle?=intent.extras
         ratingBar.visibility=View.VISIBLE
-        val movie_title_review= bundle!!.getString("title");
-        val movie_overview_review=bundle!!.getString("overview");
-        val movie_releasedate_review=bundle!!.getString("releasedate")
-        val movie_lang_review=bundle!!.getString("lang")
-        val movie_recommend_review=bundle!!.getString("recommend")
-        val user=bundle!!.getString("userRating")
-        val starrating=bundle!!.getFloat("rate")
-        showTitle.text=movie_title_review+ "\n"
-        showOverview.text=movie_overview_review +"\n"
-        showLanguage.text=movie_lang_review +"\n"
-        showreleasedate.text=movie_releasedate_review +"\n"
+        val movie_title= bundle!!.getString("title");
+        val movie_overview=bundle!!.getString("overview");
+        val movie_releasedate=bundle!!.getString("releasedate")
+        val movie_lang=bundle!!.getString("lang")
+        val movie_recommend=bundle!!.getString("recommend")
+        val user_review=bundle!!.getString("userreview")
+        val starrating=bundle!!.getFloat("userrating")
+        showTitle.text=movie_title+ "\n"
+        showOverview.text=movie_overview +"\n"
+        showLanguage.text=movie_lang +"\n"
+        showreleasedate.text=movie_releasedate +"\n"
+        showSuitableorNot.text=movie_recommend+"\n"
         ratingBar.rating=starrating
+        showReview.text=user_review
 
     }
     override fun onCreateContextMenu(menu: ContextMenu?, v: View?, menuInfo: ContextMenu.ContextMenuInfo?) {

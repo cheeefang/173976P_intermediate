@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.RatingBar
+import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_movie_details.*
 import kotlinx.android.synthetic.main.activity_movie_rater.*
@@ -20,15 +22,8 @@ class movie_rater : AppCompatActivity() {
         setContentView(R.layout.activity_movie_rater)
         val bundle:Bundle?=intent.extras
         val movie_title=bundle!!.getString("TitleReview")
-        val movie_overview=bundle!!.getString("DescReview")
-        val movie_releasedate=bundle!!.getString("DateReview")
-        val movie_lang=bundle!!.getString("LangReview")
-        val movie_recommend=bundle!!.getString("RecommendornotReview")
-        showTitle.text="Enter Your review for the movie:"+movie_title
-        showOverview.text="Movie Description:"+movie_overview+"\n"
-        showreleasedate.text="Movie Release Date:"+movie_releasedate
-        showLanguage.text="Movie Language"+movie_lang
-        showSuitableorNot.text="Suitable for Children below 13:"+movie_recommend
+
+        raterShowTitle.text="Enter Your review for the movie:"+movie_title
 
     }
 
@@ -42,6 +37,8 @@ class movie_rater : AppCompatActivity() {
             val movie_recommend=bundle!!.getString("RecommendornotReiew")
             val userrating=starrating.rating.toFloat()
             val userreview=editreview.text.toString()
+
+
             val somethingIntent= Intent(applicationContext,movie_details::class.java)
             somethingIntent.putExtra("movie_title",movie_title)
             somethingIntent.putExtra("movie_overview",movie_overview)
