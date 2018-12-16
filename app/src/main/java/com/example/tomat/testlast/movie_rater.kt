@@ -34,7 +34,7 @@ class movie_rater : AppCompatActivity() {
             val movie_overview=bundle!!.getString("DescReview")
             val movie_releasedate=bundle!!.getString("DateReview")
             val movie_lang=bundle!!.getString("LangReview")
-            val movie_recommend=bundle!!.getString("RecommendornotReiew")
+            val movie_recommend=bundle!!.getString("RecommendornotReview")
             val userrating=starrating.rating.toFloat()
             val userreview=editreview.text.toString()
 

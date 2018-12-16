@@ -23,7 +23,7 @@
             android:id="@+id/showOverviewlabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Overview: \n"/>
+            android:text="Overview:"/>
     <TextView
             android:id="@+id/showOverview"
             android:layout_width="wrap_content"
@@ -32,7 +32,7 @@
             android:id="@+id/showReviewlabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Reviews: \n"/>
+            android:text="Reviews:"/>
     <TextView
             android:id="@+id/showReview"
             android:layout_width="wrap_content"
@@ -58,7 +58,7 @@
             android:id="@+id/releasedatelabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Release Date: \n"/>
+            android:text="Release Date:"/>
     <TextView
             android:id="@+id/showreleasedate"
             android:layout_width="wrap_content"
@@ -68,7 +68,7 @@
             android:id="@+id/suitablelabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Suitable for children below 13: \n"/>
+            android:text="Suitable for children below 13:"/>
     <TextView
             android:id="@+id/showSuitableorNot"
             android:layout_width="wrap_content"

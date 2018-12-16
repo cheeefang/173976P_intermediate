@@ -11,7 +11,7 @@
             android:id="@+id/pressMe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="You have not added a movie \n long press me to add a movie"
+            android:text="You have not added a movie \n Long press me to add a movie"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
